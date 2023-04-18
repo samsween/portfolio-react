@@ -19,14 +19,13 @@ export const MobileMenu = ({ setOpen, open }) => {
     };
   }, []);
   return (
-    <>
-      {open ? (
+ 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50"
+          className={"fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50" + (open ? " block" : " hidden")}
         >
           <aside
             className="w-80 fixed top-0 right-0 h-screen flex justify-between flex-col bg-[#1E3F66] z-50"
@@ -58,9 +57,6 @@ export const MobileMenu = ({ setOpen, open }) => {
             </p>
           </aside>
         </motion.div>
-      ) : (
-        <></>
-      )}
-    </>
+      
   );
 };
