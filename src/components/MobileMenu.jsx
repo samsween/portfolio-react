@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Copyright } from "tabler-icons-react";
+import { Copyright, DeviceMobileMessage, File, Hammer, Home, InfoCircle } from "tabler-icons-react";
 import { Link } from "react-router-dom";
 export const MobileMenu = ({ setOpen, open }) => {
   const containerRef = useRef(null);
@@ -32,20 +32,26 @@ export const MobileMenu = ({ setOpen, open }) => {
             ref={containerRef}
           >
             <h1 className="text-xl text-white p-8">Sam Sweeney</h1>
-            <ul className="text-lg text-white flex flex-col gap-2">
-              <li className="py-4 px-8 bg-[#2E5984]  text-center border-white">
+            <ul className="text-xl text-white flex flex-col gap-2">
+              <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
+                <Home />
                 <Link to="/">Home</Link>
               </li>
-              <li className="py-4 px-8 bg-[#2E5984]  text-center border-white">
+              <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
+                <InfoCircle />
                 <Link to="/about">About Me</Link>
+                
               </li>
-              <li className="py-4 px-8 bg-[#2E5984] text-center border-white">
+              <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
+                <Hammer />
                 <Link to="/projects">Projects</Link>
               </li>
-              <li className="py-4 px-8 bg-[#2E5984] text-center border-white">
+              <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
+                <DeviceMobileMessage />
                 <Link to="/contact">Contact</Link>
               </li>
-              <li className="py-4 px-8 bg-[#2E5984] text-center border-white">
+              <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
+                <File />
                 <a download href="resume.pdf">
                   Resume
                 </a>

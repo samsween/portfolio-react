@@ -17,7 +17,9 @@ const router = createBrowserRouter(
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
     </Route>
-  )
+  ), {
+    basename: "/portfolio-react/",
+  }
 );
 
 export default router;
