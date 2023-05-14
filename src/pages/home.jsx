@@ -1,4 +1,3 @@
-
 import img from "../assets/images/web.png";
 import TypeIt from "typeit-react";
 import { AnimateDiv } from "../components/AnimateDiv";
@@ -46,4 +45,3 @@ const AnimatedText = ({ initial }) => {
     />
   );
 };
-
