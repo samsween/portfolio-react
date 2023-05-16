@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Copyright, DeviceMobileMessage, File, Hammer, Home, InfoCircle } from "tabler-icons-react";
 import { Link } from "react-router-dom";
 export const MobileMenu = ({ setOpen, open }) => {
@@ -19,13 +19,13 @@ export const MobileMenu = ({ setOpen, open }) => {
     };
   }, []);
   return (
- 
-        <motion.div
+    <AnimatePresence>
+       {open &&  <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className={"fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50" + (open ? " block" : " hidden")}
+          className={"fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50" }
         >
           <aside
             className="w-80 fixed top-0 right-0 h-screen flex justify-between flex-col bg-[#1E3F66] z-50"
@@ -62,7 +62,8 @@ export const MobileMenu = ({ setOpen, open }) => {
               <Copyright width={18} />
             </p>
           </aside>
-        </motion.div>
+        </motion.div>}
+        </AnimatePresence>
       
   );
 };

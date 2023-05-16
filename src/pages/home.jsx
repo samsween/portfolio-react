@@ -1,6 +1,7 @@
 import img from "../assets/images/web.png";
 import TypeIt from "typeit-react";
 import { AnimateDiv } from "../components/AnimateDiv";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -11,12 +12,12 @@ export const Home = () => {
             <h1 className="text-6xl lg:text-8xl font-bold ">
               Hi, <br /> I'm Sam <br />
             </h1>
-            <AnimatedText initial={"Developer"} />
+            <AnimatedText />
           </div>
 
-          <button className="w-1/2  py-4 bg-[#73A5C6] rounded-md">
+          <Link to={"/contact"} className="w-1/2 text-xl text-center py-4 bg-[#73A5C6] rounded-md">
             Contact
-          </button>
+          </Link>
         </div>
         <img src={img} className="w-80 hidden lg:flex" />
       </section>
@@ -24,7 +25,7 @@ export const Home = () => {
   );
 };
 
-const AnimatedText = ({ initial }) => {
+const AnimatedText = () => {
   return (
     <TypeIt
       options={{

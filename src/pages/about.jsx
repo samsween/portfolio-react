@@ -42,9 +42,9 @@ export const About = () => {
   return (
     <AnimateDiv className="w-full h-full flex justify-center items-center text-lg">
       <div className="flex flex-col gap-10 lg:gap-0">
-        <section className="text-xl flex px-5 lg:px-0 flex-col lg:flex-row items-center">
-          <div className="flex flex-col gap-8 tracking-wide">
-            <h1 className="text-4xl font-bold">About Me</h1>
+        <section className="text-xl flex px-5 lg:px-0 flex-col lg:flex-row items-center pt-20 lg:pt-0">
+          <div className="flex flex-col gap-8 tracking-wide text-lg">
+            <h1 className="text-xl lg:text-4xl font-bold">About Me</h1>
             <p>
               Hello I'm Sam, I am a passionate web developer. I have always been
               interested in technology and how it can be used to create amazing

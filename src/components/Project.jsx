@@ -7,9 +7,9 @@ export const Project = ({ project }) => {
         {project?.title}
       </h1>
       <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-normal lg:items-stretch gap-10">
-        <div className="w-1/2 text-xl flex flex-col gap-8 lg:gap-0 justify-between">
+        <div className="w-full lg:w-1/2 px-10 lg:px-0  text-xl flex flex-col gap-8 lg:gap-0 justify-between">
           <p>{project?.description}</p>
-          <div className="flex justify-between w-full items-center">
+          <div className="flex justify-between w-full items-center flex-col gap-10 lg:gap-0 lg:flex-row">
             <ul className="flex gap-4">
               {project?.icons.map((icon) => (
                 <li>
@@ -30,7 +30,8 @@ export const Project = ({ project }) => {
         <div className="w-1/2">
           <img
             src={project?.image}
-            alt="project"
+            alt={project?.title}
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>
