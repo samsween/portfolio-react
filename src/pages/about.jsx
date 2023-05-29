@@ -51,8 +51,8 @@ export const About = () => {
               online experiences.
             </p>
             <p>
-              When I am not working on websites, I enjoy sailing, playing video
-              games and . I believe that a healthy work-life balance is
+              When I am not working on websites, I enjoy sailing and playing video
+              games. I believe that a healthy work-life balance is
               important for staying motivated and focused, which is why I make
               sure to take breaks and enjoy my free time.
             </p>
