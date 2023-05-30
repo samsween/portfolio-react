@@ -40,9 +40,12 @@ const SKILLS = [
 
 export const About = () => {
   return (
-    <AnimateDiv className="w-full h-full flex justify-center items-center text-lg">
+    <AnimateDiv
+      className="w-full h-screen flex justify-center items-center text-lg"
+      id="about"
+    >
       <div className="flex flex-col gap-10 lg:gap-0">
-        <section className="text-xl flex px-5 lg:px-0 flex-col lg:flex-row items-center pt-20 lg:pt-0">
+        <section className="text-xl flex px-5 lg:px-0 flex-col lg:flex-row items-center  lg:pt-0">
           <div className="flex flex-col gap-8 tracking-wide text-lg">
             <h1 className="text-xl lg:text-4xl font-bold">About Me</h1>
             <p>
@@ -51,8 +54,8 @@ export const About = () => {
               online experiences.
             </p>
             <p>
-              When I am not working on websites, I enjoy sailing and playing video
-              games. I believe that a healthy work-life balance is
+              When I am not working on websites, I enjoy sailing and playing
+              video games. I believe that a healthy work-life balance is
               important for staying motivated and focused, which is why I make
               sure to take breaks and enjoy my free time.
             </p>

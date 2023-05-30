@@ -1,13 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-import './index.css'
-import { RouterProvider } from 'react-router-dom'
+import "./index.css";
 import { AnimatePresence } from "framer-motion";
-import router from './pages/router';
-ReactDOM.createRoot(document.getElementById('root')).render(
+import { App } from "./app";
+import { Layout } from "./components/Layout";
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <AnimatePresence
+    <AnimatePresence
       initial={{
         opacity: 0,
         transition: {
@@ -15,7 +15,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         },
       }}
     >
-      <RouterProvider router={router}></RouterProvider>
+      <Layout>
+        <App />
+      </Layout>
     </AnimatePresence>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

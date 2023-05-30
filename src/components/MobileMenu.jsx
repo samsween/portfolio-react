@@ -1,7 +1,13 @@
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Copyright, DeviceMobileMessage, File, Hammer, Home, InfoCircle } from "tabler-icons-react";
-import { Link } from "react-router-dom";
+import {
+  Copyright,
+  DeviceMobileMessage,
+  File,
+  Hammer,
+  Home,
+  InfoCircle,
+} from "tabler-icons-react";
 export const MobileMenu = ({ setOpen, open }) => {
   const containerRef = useRef(null);
   useEffect(() => {
@@ -20,12 +26,15 @@ export const MobileMenu = ({ setOpen, open }) => {
   }, []);
   return (
     <AnimatePresence>
-       {open &&  <motion.div
+      {open && (
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className={"fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50" }
+          className={
+            "fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50"
+          }
         >
           <aside
             className="w-80 fixed top-0 right-0 h-screen flex justify-between flex-col bg-[#1E3F66] z-50"
@@ -35,20 +44,19 @@ export const MobileMenu = ({ setOpen, open }) => {
             <ul className="text-xl text-white flex flex-col gap-2">
               <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
                 <Home />
-                <Link to="/">Home</Link>
+                <a href="#home">Home</a>
               </li>
               <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
                 <InfoCircle />
-                <Link to="/about">About Me</Link>
-                
+                <a href="#about">About Me</a>
               </li>
               <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
                 <Hammer />
-                <Link to="/projects">Projects</Link>
+                <a href="#projects">Projects</a>
               </li>
               <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
                 <DeviceMobileMessage />
-                <Link to="/contact">Contact</Link>
+                <a href="#contact">Contact</a>
               </li>
               <li className="py-4 rounded-2xl  flex justify-center items-center gap-2  text-center border-white">
                 <File />
@@ -62,8 +70,8 @@ export const MobileMenu = ({ setOpen, open }) => {
               <Copyright width={18} />
             </p>
           </aside>
-        </motion.div>}
-        </AnimatePresence>
-      
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };

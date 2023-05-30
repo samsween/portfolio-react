@@ -2,7 +2,10 @@ import { AnimateDiv } from "../components/AnimateDiv";
 import { BrandLinkedin, Mail, Phone } from "tabler-icons-react";
 export const Contact = () => {
   return (
-    <AnimateDiv className="flex py-20 w-full gap-8 h-full px-10 lg:px-0 flex-1 ">
+    <AnimateDiv
+      className="flex w-full gap-8 h-screen fleex justify-center items-center px-10 lg:px-0 flex-1 "
+      id="contact"
+    >
       <div className="flex flex-col gap-8 text-2xl w-full ">
         <h1 className="text-4xl font-bold text-center ">Contact</h1>
         {/* <p className="text-lg">

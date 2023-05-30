@@ -3,7 +3,7 @@ import { PROJECTS } from "../utils/projects";
 import { Project } from "../components/Project";
 export const Projects = () => {
   return (
-    <AnimateDiv className="min-w-full min-h-full ">
+    <AnimateDiv className="min-w-full min-h-screen " id="projects">
       <h1 className="text-4xl font-bold py-20 text-center lg:text-left">
         Projects
       </h1>
